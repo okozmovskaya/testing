@@ -10,8 +10,10 @@ const filterOutStrings = (arr) => {
   if (!Array.isArray(arr)) { throw new TypeError('arr'); }
 
   const noStrings = [];
-  for (let _ of _) {
-
+  for (let item of arr) {
+    if (typeof item !== 'string') {
+      noStrings.push(item);
+    }
   }
 
   return noStrings;
