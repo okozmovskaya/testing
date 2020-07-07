@@ -9,9 +9,9 @@ const assert = chai.assert;
 const mapToNumber = (arr) => {
   if (!Array.isArray(arr)) { throw new TypeError('arr'); }
 
-  const numberValues = [];
-  for (let _ of _) {
-
+  for (let item of arr) {
+    const number = Number(item);
+    numberValues.push(number);
   }
 
   return numberValues;
