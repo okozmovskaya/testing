@@ -18,6 +18,18 @@
             },
             {
               "path": "/4-deep-comparing.js"
+            },
+            {
+              "path": "/comparing.js"
+            },
+            {
+              "path": "/const-reference-types.js"
+            },
+            {
+              "path": "/deep-comparing.js"
+            },
+            {
+              "path": "/shared-reference.js"
             }
           ],
           "isExample": true
@@ -58,6 +70,21 @@
             },
             {
               "path": "/5-pure-functions.js"
+            },
+            {
+              "path": "/avoiding-side-effects.js"
+            },
+            {
+              "path": "/passing-arrays-as-arguments.js"
+            },
+            {
+              "path": "/pure-functions.js"
+            },
+            {
+              "path": "/side-effects.js"
+            },
+            {
+              "path": "/testing-for-side-effects.js"
             }
           ],
           "isExample": true
@@ -104,6 +131,9 @@
             },
             {
               "path": "/filtering.js"
+            },
+            {
+              "path": "/for-of.js"
             },
             {
               "path": "/mapping.js"
