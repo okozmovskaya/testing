@@ -9,13 +9,8 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
  * @param {string} str - string to check for "!"
  * @returns {boolean} if str contains "!" or not
  */
-<<<<<<< HEAD
-const isEnthusiastic = _;
-=======
-const isEnthusiastic = (_) => {
-  return _;
-};
->>>>>>> upstream/master
+
+const isEnthusiastic = (param) => Boolean(param.includes('!'));
 
 
 // this works!  no need to change it

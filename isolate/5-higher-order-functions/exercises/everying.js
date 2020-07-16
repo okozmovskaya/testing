@@ -8,7 +8,7 @@
  * @returns {boolean}
  */
 
-const isFalsy (param) => param === [] || !Boolean(param);
+const isFalsy = (param) => param === [] || !Boolean(param);
 
 
 // this works!  no need to change it
