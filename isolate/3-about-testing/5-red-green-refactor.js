@@ -1,3 +1,5 @@
+'use strict';
+
 /* Red, Green, Refactor
   this is an idea from Test Driven Development
   when you write code with tests you should follow this process:
@@ -11,6 +13,7 @@
 
   the example below has different steps of a full solution
   try commenting and uncomment the different steps to see what the tests do
+
 */
 
 const assert = chai.assert;
@@ -22,25 +25,37 @@ const assert = chai.assert;
  * @returns {(number|string)}
  */
 const numberOrType = (value) => {
-  // 0. set up an empty function
-  let result;
-  return result;
+  // pass the first test
+  return 14;
 
-  // // 1. pass the first behavior
-  // let result;
-  // if (typeof value === 'number') {
-  //   result = value;
+  // // pass the second test
+  // if (value === 14) {
+  //   return 14;
+  // } else {
+  //   return Infinity
   // }
-  // return result;
 
-  //   // 2. pass all behaviors
-  //   let result;
-  //   if (typeof value === 'number') {
-  //     result = value;
-  //   } else {
-  //     result = typeof value;
-  //   }
-  //   return result;
+  // // pass the third test
+  // if (value === 14) {
+  //   return 14;
+  // } else if (Number.isNaN(value)) {
+  //   return NaN
+  // } else {
+  //   return Infinity
+  // }
+
+  // // refactor for code quality
+  // if (typeof value === 'number') {
+  //   return value;
+  // }
+
+  // // // pass all the tests
+  // if (typeof value === 'number') {
+  //   return value;
+  // } else {
+  //   return typeof value;
+  // }
+
 };
 
 describe('numberOrType', () => {

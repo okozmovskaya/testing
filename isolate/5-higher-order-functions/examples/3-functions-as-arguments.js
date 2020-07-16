@@ -11,8 +11,17 @@
 */
 
 
+<<<<<<< HEAD
 const printHello = () => console.log('hello');
 const printGoodbye = () => console.log('goodbye');
+=======
+const printHello = () => {
+  console.log('hello');
+};
+const printGoodbye = () => {
+  console.log('goodbye');
+};
+>>>>>>> upstream/master
 
 /**
  * calls it's two parameters in order, first then second

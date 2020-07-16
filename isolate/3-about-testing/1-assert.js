@@ -1,3 +1,5 @@
+'use strict';
+
 /* Chai is an assertion library
   you can think of it like a super console.assert
   if the assertion passes, nothing happens

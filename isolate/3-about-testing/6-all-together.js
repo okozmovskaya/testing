@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = chai.assert;
 
 // this comment describes how the function should behave

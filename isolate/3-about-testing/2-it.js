@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = chai.assert;
 
 // it is a function that helps to read test results

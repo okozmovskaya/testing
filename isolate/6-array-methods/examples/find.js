@@ -5,7 +5,13 @@
  * @param {string} str - the string to check for enthusiasm
  * @returns {boolean}
  */
+<<<<<<< HEAD
 const isCurious = (str) => str.includes('?');
+=======
+const isCurious = (str) => {
+  return str.includes('?');
+};
+>>>>>>> upstream/master
 
 
 // returns undefined if the array is empty

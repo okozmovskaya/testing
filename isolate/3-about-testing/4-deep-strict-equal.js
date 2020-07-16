@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = chai.assert;
 
 /* comparing arrays doesn't work like you'd hope

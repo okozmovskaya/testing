@@ -7,7 +7,13 @@ const assert = chai.assert;
  * @param {string} str - the string to reverse
  * @returns {string} the string, reversed
  */
+<<<<<<< HEAD
 const reverseString = (str) => _;
+=======
+const reverseString = (str) => {
+  return _;
+};
+>>>>>>> upstream/master
 
 
 describe('reverseString: reverses a string', () => {

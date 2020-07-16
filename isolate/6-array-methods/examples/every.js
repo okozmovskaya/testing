@@ -5,7 +5,13 @@
  * @param {any} val
  * @returns {boolean}
  */
+<<<<<<< HEAD
 const isFalsy = (val) => !Boolean(val);
+=======
+const isFalsy = (val) => {
+  return !Boolean(val);
+};
+>>>>>>> upstream/master
 
 
 // an empty array returns true

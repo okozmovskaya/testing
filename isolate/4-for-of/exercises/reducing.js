@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = chai.assert;
 
 /**
@@ -13,8 +15,6 @@ const concatenateAsStrings = (arr) => {
   for (let item of arr) {
     const stringItem = String(item);
     concatenated += stringItem;
-  }
-
   return concatenated;
 };
 

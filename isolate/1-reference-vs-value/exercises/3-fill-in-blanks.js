@@ -1,3 +1,5 @@
+'use strict';
+
 // it's conventional to declare dependencies at the top of a file
 const deepCompareArrays = (actual, expect) => actual === expect || Object.is(actual, expect) || (Object(actual) === actual && Object(expect) === expect) && (Array.isArray(actual) && Array.isArray(expect) && actual.length === expect.length && expect.every((expect, index) => deepCompareArrays(actual[index], expect)));
 

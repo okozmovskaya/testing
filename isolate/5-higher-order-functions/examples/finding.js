@@ -27,7 +27,13 @@ const find = (arr, callback) => {
 const argArray = [3, true, 'hi', '', 0];
 
 // Callback to identify a boolean
+<<<<<<< HEAD
 const isAString = (val) => typeof val === 'string';
+=======
+const isAString = (val) => {
+  return typeof val === 'string';
+};
+>>>>>>> upstream/master
 
 const _1_expect = 'hi';
 const _1_actual = find(argArray, isAString);
@@ -35,7 +41,13 @@ console.assert(_1_actual === _1_expect, 'Test 1: find first string');
 
 
 // Callback to identify an first empty string
+<<<<<<< HEAD
 const isEmptyString = (val) => val === '';
+=======
+const isEmptyString = (val) => {
+  return val === '';
+};
+>>>>>>> upstream/master
 
 const _2_expect = '';
 const _2_actual = find(argArray, isEmptyString);
@@ -43,7 +55,13 @@ console.assert(_2_actual === _2_expect, 'Test 2: find first empty string');
 
 
 // callback to identify false
+<<<<<<< HEAD
 const isFalse = (val) => val === false;
+=======
+const isFalse = (val) => {
+  return val === false;
+};
+>>>>>>> upstream/master
 
 const _3_expect = undefined;
 const _3_actual = find(argArray, isFalse);

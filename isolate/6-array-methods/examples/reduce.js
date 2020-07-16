@@ -6,7 +6,13 @@
  * @param {string} next
  * @returns {string} "acc, next"
  */
+<<<<<<< HEAD
 const commaSpace = (acc, next) => `${acc}, ${next}`;
+=======
+const commaSpace = (acc, next) => {
+  return `${acc}, ${next}`;
+};
+>>>>>>> upstream/master
 
 
 // reduce requires an initial value if the array is empty

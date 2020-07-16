@@ -7,6 +7,7 @@
  * @param {any} val
  * @returns {boolean}
  */
+
 const isFalsy (param) => param === [] || !Boolean(param);
 
 

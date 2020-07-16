@@ -10,8 +10,17 @@ const assert = chai.assert;
  */
 const firstNegativeNumber = (arr) => {
   // these work, you need to pass them to the right array methods
+<<<<<<< HEAD
   const isNegative = (entry) => entry < 0;
   const isNumber = (entry) => typeof entry === 'number';
+=======
+  const isNegative = (entry) => {
+    return entry < 0;
+  };
+  const isNumber = (entry) => {
+    return typeof entry === 'number';
+  };
+>>>>>>> upstream/master
 
   // fill in the array methods and pass the correct logic
   const negativeNumber = arr

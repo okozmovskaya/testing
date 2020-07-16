@@ -10,7 +10,13 @@
  * @param {any} entry
  * @returns {boolean}
  */
+<<<<<<< HEAD
 const isFalsy = (entry) => !Boolean(entry);
+=======
+const isFalsy = (entry) => {
+  return !Boolean(entry);
+};
+>>>>>>> upstream/master
 
 // test isFalsy
 const isFalsyTest1 = isFalsy(0) === true;

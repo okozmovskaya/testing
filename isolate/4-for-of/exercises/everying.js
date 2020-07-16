@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = chai.assert;
 
 /**
@@ -12,10 +14,7 @@ const containsNoNumbers = (arr) => {
   let noNumbers = true;
   for (let item of arr) {
     noNumbers = noNumbers && (typeof item !== 'number')
-     
-  }
-
-  return noNumbers;
+    return noNumbers;
 };
 
 
