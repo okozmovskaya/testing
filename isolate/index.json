@@ -100,9 +100,6 @@
               "path": "/3-avoiding-side-effects.js"
             },
             {
-              "path": "/4-testing-for-side-effects.js"
-            },
-            {
               "path": "/5-pure-functions.js"
             },
             {
