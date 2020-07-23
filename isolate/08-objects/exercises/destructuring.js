@@ -4,29 +4,29 @@ const expect = chai.expect;
 
 describe('destructuring', () => {
   it('types of tasty treats', () => {
-    const { dry, wet } = {
-      wet: _,
+    const obj = {
+      wet: 'soup',
       dry: 'bread'
     };
-    expect(_).to.eql('bread');
-    expect(wet).to.eql('soup');
+    expect(obj.dry).to.eql('bread');
+    expect(obj.wet).to.eql('soup');
   });
   it('a menagerie', () => {
-    const hairiest = 'cheetah';
-    const oceanic = _;
+    const hairiest = 'running';
+    const oceanic = 'swimming';
     const obj = {
       [oceanic]: 'mackerel',
-      running: hairiest
+      running: 'cheetah'
     };
-    const birdy = _;
-    obj[birdy] = _;
+    const birdy = 'flying';
+    obj[birdy] = 'crane';
     const {
       swimming,
       flying,
       running
     } = obj;
-    expect(flying).to.eql(_);
-    expect(_).to.eql('cheetah');
-    expect(swimming).to.eql('mackerel')
+    expect(flying).to.eql('crane');
+    expect(obj.running).to.eql('cheetah');
+    expect(obj.swimming).to.eql('mackerel')
   });
 });
