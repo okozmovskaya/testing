@@ -25,12 +25,12 @@
   <script id='handlers'>
     'use strict';
 
-    const displayEntriesHandler = (message = '_', object = _) => {
+    const displayEntriesHandler = (message = 'all entries', object = userEntries) => {
       debugger;
       const starter = message + ':';
       let stringToDisplay = starter;
-      for (const _ in object) {
-        const nextLine = ` ${_}: ${object[_]}`;
+      for (const key in object) {
+        const nextLine = ` ${key}: ${object[key]}`;
         stringToDisplay += '\n' + nextLine;
       }
       alert(stringToDisplay);
@@ -38,81 +38,68 @@
 
     const resetHandler = () => {
       debugger;
-      userEntries = _;
+      userEntries = {};
       displayEntriesHandler();
     };
 
     const writeEntryHandler = () => {
       debugger;
-      const key = prompt(_);
-      if (_) { return; }
+      const key = prompt('enter a key:');
+      if (key === null) { return; }
 
-      const newValue = prompt(_);
-      if (_) { return; }
+      const newValue = prompt('enter a value');
+      if (newValue === null) { return; }
 
-      _[_] = _;
+      userEntries[key] = newValue;
 
       displayEntriesHandler();
     };
 
     const deleteEntryHandler = () => {
       debugger;
-      const userKey = prompt(_);
-      if (userKey === null) { return; }
+      const key = prompt('enter a key to find:');
+      if (key === null) { return; }
 
-      let keyExists = false;
-      for (const _ in _) {
-        if (_ === _) {
-          keyExists = true;
-          break;
-        }
-      }
+      const keyExists = Object.keys(userEntries)
+        .includes(key); // does the array include the exact string?
 
       if (keyExists) {
-        delete userEntries[_];
-        _();
+        delete userEntries[key];
+        displayEntriesHandler();
       } else {
-        alert(_);
+        alert(`${key} does not exist`);
       }
     };
 
     const findKeyHandler = () => {
       debugger;
-      const userKey = prompt(_);
+      const userKey = prompt('enter a key to find:');
       if (userKey === null) { return; }
 
-      let keyExists = false;
-      for (const _ in _) {
-        if (_ === _) {
-          keyExists = true;
-          break;
-        }
-      }
+      const keyExists = Object.keys(userEntries)
+        .includes(userKey);
 
-      if (_) {
-        const foundEntry = _;
+      if (keyExists) {
+        const foundEntry = `${userKey}: ${userEntries[userKey]}`;
         alert(foundEntry);
       } else {
-        alert(_);
+        alert(`entry "${userKey}" does not exist`);
       }
     };
 
     const searchValuesHandler = () => {
       debugger;
-      const query = prompt(_);
+      const query = prompt('enter a search query');
       if (query === null) { return; }
 
-      let searchResults = {};
-      for (const _ in _) {
-        const value = _[key];
-        const matchesQuery = _; // does the string value include the query?
-        if (matchesQuery) {
-          _ = value;
-        }
-      }
-
-      displayEntriesHandler(_, _);
+      const matchingEntries = Object.entries(userEntries)
+        .filter((entry) => {
+          return entry[1].includes(query); // does the string include this substring?
+        });
+      const searchResults = Object.fromEntries(matchingEntries);
+      displayEntriesHandler(`search results for "${query}"`, searchResults);
     };
+
   </script>
 </head>
 
